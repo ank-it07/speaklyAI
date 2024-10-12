@@ -1,7 +1,7 @@
 import BgGradient from "@/components/common/bg-gradient";
 import { Badge } from "@/components/ui/badge";
 import UpgradeYourPlan from "@/components/upload/upgrade-your-plan";
-// import UploadForm from "@/components/upload/upload-form";
+import UploadForm from "@/components/upload/upload-form";
 import getDbConnection from "@/lib/db";
 import {
   doesUserExist,
@@ -42,7 +42,8 @@ export default async function Dashboard() {
 
   const { id: planTypeId = "starter", name: planTypeName } =
     getPlanType(priceId);
-
+// -----------------------------------------------------------
+  const isStarterPlan=planTypeId==="starter";
   const isBasicPlan = planTypeId === "basic";
   const isProPlan = planTypeId === "pro";
 
@@ -66,8 +67,8 @@ export default async function Dashboard() {
           <p className="mt-2 text-lg leading-8 text-gray-600 max-w-2xl text-center">
             Upload your audio or video file and let our AI do the magic!
           </p>
-
-          {(isBasicPlan || isProPlan) && (
+           {/* ---------------------- */}
+          {(isStarterPlan || isBasicPlan || isProPlan) && (
             <p className="mt-2 text-lg leading-8 text-gray-600 max-w-2xl text-center">
               You get{" "}
               <span className="font-bold text-amber-600 bg-amber-100 px-2 py-1 rounded-md">
@@ -77,10 +78,11 @@ export default async function Dashboard() {
               <span className="font-bold capitalize">{planTypeName}</span> Plan.
             </p>
           )}
+        {/* -----------e */}
 
-          {isValidBasicPlan || isProPlan ? (
+          {isStarterPlan || isValidBasicPlan || isProPlan ? (
             <BgGradient>
-              {/* <UploadForm /> */}
+              <UploadForm />
             </BgGradient>
           ) : (
             <UpgradeYourPlan />
