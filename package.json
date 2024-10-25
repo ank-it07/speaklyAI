@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.2",
+    "@google/generative-ai": "^0.21.0",
     "@neondatabase/serverless": "^0.10.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
     "@uploadthing/react": "^7.0.3",
+    "assemblyai": "^4.7.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.452.0",
