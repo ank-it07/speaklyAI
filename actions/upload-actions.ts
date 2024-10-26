@@ -9,7 +9,6 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 const client = new AssemblyAI({
   apiKey: process.env.ASSEMBLY_API_KEY!
 })
-
 // const openai = new OpenAI({
 //   apiKey: process.env.OPENAI_API_KEY,
 // });
@@ -135,7 +134,7 @@ export async function generateBlogPostAction({
   transcriptions,
   userId,
 }: {
-  transcriptions: { text: string };
+  transcriptions: any;
   userId: string;
 }) {
   const userPosts = await getUserBlogPosts(userId);
@@ -144,7 +143,7 @@ export async function generateBlogPostAction({
 
   if (transcriptions) {
     const blogPost = await generateBlogPost({
-      transcriptions: transcriptions.text,
+      transcriptions,
       userPosts,
     });
 
