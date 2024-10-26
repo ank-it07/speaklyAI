@@ -6,10 +6,8 @@ export const plansMap = [
       price: "10",
       items: ["3 Blog Posts", "3 Transcription"],
       paymentLink: "https://buy.stripe.com/test_eVa3fvcnXaTTb3a4gg",
-      priceId:
-        process.env.NODE_ENV === "development"
-          ? "price_1Q97yC1Eg4hSxn8HFni7s1Ve"
-          : "",
+      priceId:"price_1Q97yC1Eg4hSxn8HFni7s1Ve"
+
     },
     {
       id: "pro",
@@ -18,10 +16,7 @@ export const plansMap = [
       price: "19.99",
       items: ["Unlimited Blog Posts", "Unlimited Transcriptions"],
       paymentLink: "https://buy.stripe.com/test_3cs4jzew58LL6MU4gh",
-      priceId:
-        process.env.NODE_ENV === "development"
-          ? "price_1Q97yC1Eg4hSxn8HbE2mFhiL"
-          : "",
+      priceId:"price_1Q97yC1Eg4hSxn8HbE2mFhiL"
     },
   ];
   
