@@ -27,6 +27,8 @@ Built with the Next.js 14 App Router, Clerk for Auth - with Passkeys, Github and
 - Recent blog posts display
 - Protected routes and API endpoints
 
+![image](https://github.com/user-attachments/assets/58a779ec-60fa-49fe-b51e-e36e400253cb)
+
 ## Getting Started
 
 First, run the development server:
